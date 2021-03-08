@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/sekanghuh/.nvm/versions/node/v14.13.0/bin/node /Users/sekanghuh/.nvm/versions/node/v14.13.0/bin/yarn add gloabal create-react-app
+
+PATH: 
+  /Users/sekanghuh/.nvm/versions/node/v14.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/gloabal: Not found
+      at Request.params.callback [as _callback] (/Users/sekanghuh/.nvm/versions/node/v14.13.0/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/Users/sekanghuh/.nvm/versions/node/v14.13.0/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:314:20)
+      at Request.<anonymous> (/Users/sekanghuh/.nvm/versions/node/v14.13.0/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:314:20)
+      at IncomingMessage.<anonymous> (/Users/sekanghuh/.nvm/versions/node/v14.13.0/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1252:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
