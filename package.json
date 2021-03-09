@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "create-react-app": "^4.0.3",
-    "global": "^4.4.0"
+    "global": "^4.4.0",
+    "styled-components": "^5.2.1"
   }
 }

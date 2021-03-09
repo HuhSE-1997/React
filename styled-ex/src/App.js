@@ -13,6 +13,11 @@ class App extends React.Component {
     this.state = {
       list: ["영화관 가기", "매일 책읽기", "수영 배우기"],
     };
+    this.text = React.createRef();
+  }
+  componentDidMount(){
+    console.log(this.text)
+    console.log(this.text.current)
   }
 
   // 랜더 함수 안에 리액트 엘리먼트를 넣어줍니다!
@@ -22,10 +27,9 @@ class App extends React.Component {
         <Container>
           <Title >내 버킷리스트</Title>
           <Line/>
-          {/* 컴포넌트를 넣어줍니다. */}
-          {/* <컴포넌트 명 [props 명]={넘겨줄 것(리스트, 문자열, 숫자, ...)}/> */}
           <BucketList list={this.state.list} />
         </Container>
+        <input type="text"></input>
       </div>
     );
   }
