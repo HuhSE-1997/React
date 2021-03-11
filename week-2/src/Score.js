@@ -2,11 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import styled from "styled-components";
 
-const Score = () => {
+const Score = (props) => {
   return (
     <ScoreContainer>
       <h1>
-        <span>스파리트 코딩 클럽</span> 퀴즈에 <br />
+        <span>{props.name}</span> 퀴즈에 <br />
         대한 내점수는?
       </h1>
 
@@ -15,10 +15,7 @@ const Score = () => {
       </ScoreScore>
 
       <ScoreContents>
-        <p>
-          이 정도면 아주 친한 친구 사이 ! 앞으로 더 친<br />
-          하게 지내요 :)
-        </p>
+        <p>{props.contents}</p>
       </ScoreContents>
       <FirstButton>점수 보기</FirstButton>
       <SecondButton>량캉 보기</SecondButton>

@@ -2,23 +2,44 @@ import logo from "./logo.svg";
 import "./App.css";
 import styled from "styled-components";
 import image from "./123.png";
+import TinderCard from "react-tinder-card";
+import React from "react"
 
-const Quiz = () => {
+const Quiz = (props) => {
+  const [num, setNum] = React.useState(0);
+
+  const onSwipe = (direction) => {
+    setNum(num+1)
+    console.log('You swiped: ' + direction)
+  }
+   
   return (
     <QuizContainer>
       <p>
-        <span>5번 문제</span>
+        <span>{num+1}번 문제</span>
       </p>
-      <Contents>문제입니다</Contents>
+      {props.list.map((l, idx)=>{
+        if(num===idx){
+          return(<Contents key = {idx}>{l.question}</Contents>)
+        }
+      })}
       <AnswerZone>
         <Answer>o</Answer>
         <Answer>x</Answer>
       </AnswerZone>
-      <DragItem>
-          <div>
-        <img src={image} alt="sparta" />
-        </div>
-      </DragItem>
+
+      {props.list.map((l, idx) => {
+        if(idx===num){
+          return (
+            <DragItem key ={idx}>
+              <TinderCard onSwipe={onSwipe}>
+                <img src={image} alt="sparta" />
+              </TinderCard>
+            </DragItem>
+          );
+        }
+      
+})}
     </QuizContainer>
   );
 };
